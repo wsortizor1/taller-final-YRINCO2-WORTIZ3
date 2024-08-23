@@ -60,7 +60,7 @@ public class Main {
                     System.out.println("Chao");
                     break;
             }
-            System.out.println(); // Línea en blanco para mejor legibilidad
+            System.out.println();
         } while (menu != 11);
 
         scanner.close();
