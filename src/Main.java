@@ -27,10 +27,135 @@ public class Main {
 
             switch (menu) {
                 case 1:
-                    System.out.println("Has seleccionado la Opción 1.");
+                    do {
+                        System.out.println("*");
+                        System.out.println("*");
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-              Datos Primitivos                -");
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-1. Explicación de Datos Primitivos            -");
+                        System.out.println("-2. Ejemplo de Datos Primitivos                -");
+                        System.out.println("-3. Otros ejemplos de datos primitivos         -");
+                        System.out.println("-4. Volver                                     -");
+                        System.out.print("Seleccione una opción del submenu: ");
+                        subMenu = scanner.nextInt();
+                        switch (subMenu) {
+                            case 1:
+                                System.out.println("*");
+                                System.out.println("*");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("-    1. Explicación de Datos Primitivos        -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("Los datos primitivos son los tipos de datos    -");
+                                System.out.println("más básicos y fundamentales en Java. Incluyen  -");
+                                System.out.println("int, char, boolean, byte, short, long, float,  -");
+                                System.out.println("y double.                                      -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 2:
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("  2. Ejemplo de Datos Primitivos"  );
+                                System.out.println("------------------------------------------------");
+                                System.out.println("En este ejemplo, se declara una variable llamada");
+                                System.out.println("numero de tipo int y se le asigna el valor 10.  ");
+                                System.out.println("	Luego se imprime el valor de la variable 	");
+                                System.out.println("			en la consola.  					");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("public class EjemploDatosPrimitivos {          -");
+                                System.out.println("    public static void main(String[] args) {   -");
+                                System.out.println("        int numero = 10;                       -");
+                                System.out.println("        System.out.println(\"El valor de la     -");
+                                System.out.println("        variable numero es: \" + numero);       -");
+                                System.out.println("    }                                          -");
+                                System.out.println("}                                              -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 3:
+                                System.out.println("*");
+                                System.out.println("*");
+                                System.out.println(" 3. Otros ejemplos de datos primitivos");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("char: para caracteres individuales como 'a' 'Z'-");
+                                System.out.println("boolean: para valores booleanos (true o false).-");
+                                System.out.println("double: números punto flotante  doble precisión-");
+                                System.out.println("float: números punto flotante  precisión simple-");
+                                System.out.println("long: para números enteros largos.			   -");
+                                System.out.println("short: para números enteros cortos.		       -");
+                                System.out.println("byte: para números enteros muy pequeños.  	   -");
+                                System.out.println("                                               -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 4:
+                                System.out.println("Volver al menú");
+                                break;
+                            default:
+                                System.out.println("Opción no válida.");
+                        }
+                    } while (subMenu != 4);
                     break;
                 case 2:
-                    System.out.println("Has seleccionado la Opción 2.");
+                    do {
+                        System.out.println("*");
+                        System.out.println("*");
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-                  String                      -");
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-1. Explicación de string                      -");
+                        System.out.println("-2. Ejemplo y caracteristica del string        -");
+                        System.out.println("-3. Volver                                     -");
+                        System.out.print("Seleccione una opción del submenu: ");
+                        subMenu = scanner.nextInt();
+                        switch (subMenu) {
+                            case 1:
+                                System.out.println("*");
+                                System.out.println("*");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("-    1. Explicacion de string                  -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println(" un String es un tipo de dato que se utiliza   -");
+                                System.out.println(" para representar texto.                       -");
+                                System.out.println(" Básicamente, es una secuencia de caracteres   -");
+                                System.out.println(" que se encuentran entre comillas dobles.      -");
+                                System.out.println("    Por ejemplo, 'Hola mundo' es un String   -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 2:
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("  2. Ejemplo de String                        ");
+                                System.out.println("------------------------------------------------");
+                                System.out.println(" Inmutabilidad: Una vez que se crea un String,  ");
+                                System.out.println(" su valor no puede ser modificado.              ");
+                                System.out.println(" Cualquier operación que parezca modificar un 	");
+                                System.out.println(" String en realidad crea un nuevo objeto String	");
+                                System.out.println(" Declaración: Para declarar un String,          ");
+                                System.out.println(" simplemente utilizas la palabra clave	String  ");
+                                System.out.println(" seguida del nombre de la variable y el valor   ");
+                                System.out.println(" y el valor entre comillas dobles.              ");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("                                               -");
+                                System.out.println("      String saludo = 'Hola, mundo';           -");
+                                System.out.println("                                               -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 3:
+                                System.out.println("Volver al menú");
+                                break;
+                            default:
+                                System.out.println("Opción no válida.");
+                        }
+                    } while (subMenu != 3);
                     break;
                 case 3:
                     System.out.println("Has seleccionado la Opción 3.");
