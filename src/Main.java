@@ -138,7 +138,8 @@ public class Main {
                                 System.out.println();
                                 System.out.print("Digite el número: ");
 
-                                int numero = scanner.nextInt();{
+                                int numero = scanner.nextInt();
+                            {
                                 String resultado = (numero % 2 == 0) ? "par" : "impar";
                                 System.out.println("El número " + numero + " es " + resultado + ".");
                             }
@@ -170,26 +171,38 @@ public class Main {
                                 System.out.println("------------------------------------------------");
                                 System.out.println("-        1. Explicación bucle DO WHILE         -");
                                 System.out.println("------------------------------------------------");
-                                System.out.println("El operador ternario en Java es una             ");
-                                System.out.println("construcción que permite tomar decisiones      -");
-                                System.out.println("basadas en una condición booleana              -");
-                                System.out.println("de manera concisa en una sola línea de código. -");
+                                System.out.println("Los ciclos do-while son una estructura de       ");
+                                System.out.println("de control cíclica, que nos permiten ejecutar  -");
+                                System.out.println("una o varias líneas de código de forma         -");
+                                System.out.println("repetitiva sin necesidad de tener un valor     -");
+                                System.out.println("inicial e incluso a veces sin siquiera conocer -");
+                                System.out.println("cuándo se va a dar el valor final.             -");
                                 System.out.println("------------------------------------------------");
                                 System.out.println("--------------Enter para continuar--------------");
                                 scannerEnter.nextLine();
                                 break;
                             case 2:
-                                System.out.println("  2. Programa de Ternaria-Determine si un número es par o impar");
-                                System.out.println();
-                                System.out.print("Digite el número: ");
+                                System.out.println("Adivine un número del 1 al 10");
 
-                                int numero = scanner.nextInt();{
-                                String resultado = (numero % 2 == 0) ? "par" : "impar";
-                                System.out.println("El número " + numero + " es " + resultado + ".");
-                            }
-                            System.out.println("--------------Enter para continuar--------------");
-                            scannerEnter.nextLine();
-                            break;
+                                int numero = (int) (Math.random() * 10) + 1; // Número aleatorio del 1 al 10
+                                int intento;
+
+                                do {
+                                    System.out.print("Digite el número: ");
+                                    intento = scanner.nextInt();
+
+                                    if (intento < numero) {
+                                        System.out.println("Demasiado bajo, intente nuevamente");
+                                    } else if (intento > numero) {
+                                        System.out.println("Demasiado alto, intente nuevamente");
+                                    }
+                                } while (intento != numero);
+
+                                System.out.println("¡Felicidades! Has adivinado el número.");
+
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
                             case 3:
                                 System.out.println("Volver al menú");
                                 break;
@@ -200,10 +213,105 @@ public class Main {
                     while (subMenu != 3);
                     break;
                 case 9:
-                    System.out.println("Has seleccionado la Opción 9");
+                    do {
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-                  Bucle WHILE                 -");
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-1. Explicación bucle WHILE                    -");
+                        System.out.println("-2. Programa WHILE - Sumatoria de número       -");
+                        System.out.println("-3. Volver al menu                             -");
+                        System.out.print("Seleccione una opción del menu: ");
+                        subMenu = scanner.nextInt();
+                        switch (subMenu) {
+                            case 1:
+                                System.out.println();
+                                System.out.println("------------------------------------------------");
+                                System.out.println("-        1. Explicación bucle WHILE            -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("El bucle while se encuentra en casi todos      -");
+                                System.out.println("los lenguajes de programación, y Java no es    -");
+                                System.out.println("una excepción. El ciclo while en Java y otros  -");
+                                System.out.println("lenguajes ejecuta una declaración o bloque     -");
+                                System.out.println("de declaraciones siempre que el valor de la    -");
+                                System.out.println("condición que lo activó sea verdadero.         -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 2:
+                                System.out.print("Introduce el valor de N: ");//Introduce N
+                                int N = scanner.nextInt();
+
+                                int suma = 0;// se inicializan las variables
+                                int contador = 1;// se inicializan las variables
+
+                                while (contador <= N) {
+                                    suma += contador;// Añadir contador a la suma
+                                    contador++;// Incrementa el contador
+                                }
+                                System.out.println("La suma de los números del 1 al " + N + " es: " + suma);
+
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 3:
+                                System.out.println("Volver al menú");
+                                break;
+                            default:
+                                System.out.println("Opción no válida.");
+                        }
+                    }
+                    while (subMenu != 3);
                     break;
                 case 10:
-                    System.out.println("Has seleccionado la Opción 10");
+                    do {
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-               Explicacion bucle FOR          -");
+                        System.out.println("------------------------------------------------");
+                        System.out.println("-1. Explicación bucle FOR                      -");
+                        System.out.println("-2. Programa FOR - Sumatoria de número         -");
+                        System.out.println("-3. Volver al menu                             -");
+                        System.out.print("Seleccione una opción del menu: ");
+                        subMenu = scanner.nextInt();
+                        switch (subMenu) {
+                            case 1:
+                                System.out.println();
+                                System.out.println("------------------------------------------------");
+                                System.out.println("-        1. Explicación bucle FOR              -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("El bucle for en Java toma como punto de partida-");
+                                System.out.println("un índice de control. Al final de cada bucle,  -");
+                                System.out.println("este índice se actualiza según una regla que   -");
+                                System.out.println("estableces en la estructura del bucle.         -");
+                                System.out.println("Acto seguido, el bucle comprueba si el índice  -");
+                                System.out.println("satisface la condición booleana.               -");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 2:
+                                System.out.print("Introduce el valor de N: ");//Introduce N
+                                int N = scanner.nextInt();
+
+                                int suma = 0; // declaro la variable
+
+                                // declaro la variable e inicializar la variable del ciclo; la condicion; valor de i en cuanto va a incrementar
+                                for (int i = 1; i <= N; i++)
+                                    suma += i; // Sumar i a suma
+
+                                System.out.println("La suma de los números del 1 al " + N + " es: " + suma);
+
+                                System.out.println("--------------Enter para continuar--------------");
+                                scannerEnter.nextLine();
+                                break;
+                            case 3:
+                                System.out.println("Volver al menú");
+                                break;
+                            default:
+                                System.out.println("Opción no válida.");
+                        }
+                    }
+                    while (subMenu != 3);
                     break;
                 case 11:
                     System.out.println("Chao");
