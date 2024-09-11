@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); //objeto Scanner
-        Scanner scannerEnter = new Scanner(System.in); //objeto Scanner
+        Scanner scanner = new Scanner(System.in); //clase Scanner
+        Scanner scannerEnter = new Scanner(System.in); //clase Scanner
         int menu, subMenu; //declaro tipo de dato y variable
 
         do {
@@ -513,7 +513,7 @@ public class Main {
                                 System.out.println();
                                 System.out.print("Ingresar rango de 1 -10: ");
 
-                                byte nota = scanner.nextByte();
+                                byte nota = scanner.nextByte(); //scanner.nextByte(); leer el valor de tipo byte
 
                                 switch (nota) {
                                     case 1:
@@ -549,7 +549,7 @@ public class Main {
                                 System.out.println("Opción no válida.");
                         }
                     }
-                    while (subMenu != 3);
+                    while (subMenu != 3);//los valores de dos operadores NO son iguales = true
                     break;
                 case 7:
                     do {
@@ -581,8 +581,9 @@ public class Main {
                                 System.out.print("Digite el número: ");
 
                                 int numero = scanner.nextInt();
-                            {
-                                String resultado = (numero % 2 == 0) ? "par" : "impar";
+                            {                       //parametros
+                                String resultado = (numero % 2 == 0) ? "par" : "impar";//% Devuelve el resto de la division
+                                //del primer operador por el segundo
                                 System.out.println("El número " + numero + " es " + resultado + ".");
                             }
                             System.out.println("--------------Enter para continuar--------------");
@@ -595,7 +596,7 @@ public class Main {
                                 System.out.println("Opción no válida.");
                         }
                     }
-                    while (subMenu != 3);
+                    while (subMenu != 3);//los valores de dos operadores NO son iguales = true
                     break;
                 case 8:
                     do {
@@ -626,7 +627,7 @@ public class Main {
                             case 2:
                                 System.out.println("Adivine un número del 1 al 10");
 
-                                int numero = (int) (Math.random() * 10) + 1; // Número aleatorio del 1 al 10
+                                int numero = (int) (Math.random() * 10) + 1; // Math.random() genero un numero aleatorio 0.0 y 1.0
                                 int intento;
 
                                 do {
@@ -638,7 +639,7 @@ public class Main {
                                     } else if (intento > numero) {
                                         System.out.println("Demasiado alto, intente nuevamente");
                                     }
-                                } while (intento != numero);
+                                } while (intento != numero);//los valores de dos operadores NO son iguales = true
 
                                 System.out.println("¡Felicidades! Has adivinado el número.");
 
@@ -688,8 +689,8 @@ public class Main {
                                 int contador = 1;// se inicializan las variables
 
                                 while (contador <= N) {
-                                    suma += contador;// Añadir contador a la suma
-                                    contador++;// Incrementa el contador
+                                    suma += contador;// Añade contador a la suma y se le asigna a suma
+                                    contador++;// Incrementa en 1 el valor contador
                                 }
                                 System.out.println("La suma de los números del 1 al " + N + " es: " + suma);
 
